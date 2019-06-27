@@ -91,7 +91,7 @@ class App extends Component{
   
   }
 
-    fetch('http://localhost:3001/cart',{
+    fetch('https://stark-crag-71277.herokuapp.com/cart',{
           method:'post',
           headers: {'Content-Type':'application/json'},
           body: JSON.stringify({
@@ -114,7 +114,7 @@ class App extends Component{
   onPageRouteChange=(page)=>{
     this.setState({pageRoute:page}); 
     if(page==='cartPage'){
-      fetch('http://localhost:3001/userdetails',{
+      fetch('https://stark-crag-71277.herokuapp.com/userdetails',{
           method:'post',
           headers: {'Content-Type':'application/json'},
           body: JSON.stringify({
@@ -134,7 +134,7 @@ class App extends Component{
     this.setState({collectionPage:collection});
 
     var collectionname=collection.toLowerCase();
-    fetch('http://localhost:3001/collection',{
+    fetch('https://stark-crag-71277.herokuapp.com/collection',{
         method:'post',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({
@@ -156,7 +156,7 @@ class App extends Component{
     for(var i=0;i<search.length;i++){
 
     var productname=search[i].replace(/[0-9]/g,'');
-    fetch('http://localhost:3001/product',{
+    fetch('https://stark-crag-71277.herokuapp.com/product',{
         method:'post',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({
@@ -180,7 +180,7 @@ class App extends Component{
     this.setState({pageRoute:'productPage'})
 
     var productname=product.replace(/[0-9]/g,'');
-    fetch('http://localhost:3001/product',{
+    fetch('https://stark-crag-71277.herokuapp.com/product',{
         method:'post',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({
@@ -201,7 +201,7 @@ class App extends Component{
    
     for(var i=0;i<5;i++){
       var featuredproductTable= featuredproductArray[Math.floor(Math.random() * featuredproductArray.length)];
-      fetch('http://localhost:3001/featuredproduct',{
+      fetch('https://stark-crag-71277.herokuapp.com/featuredproduct',{
           method:'post',
           headers: {'Content-Type':'application/json'},
           body: JSON.stringify({
@@ -408,7 +408,7 @@ export default App;
  
   // for(var i=0;i<5;i++){
   //   var featuredproductTable= featuredproductArray[Math.floor(Math.random() * featuredproductArray.length)];
-  //   fetch('http://localhost:3001/featuredproduct',{
+  //   fetch('https://stark-crag-71277.herokuapp.com/featuredproduct',{
   //       method:'post',
   //       headers: {'Content-Type':'application/json'},
   //       body: JSON.stringify({

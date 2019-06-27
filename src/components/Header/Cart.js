@@ -23,7 +23,7 @@ loadCart=()=>{
        cartArrayNumber.push(cartnumber);
 
     
-       fetch('http://localhost:3001/product',{
+       fetch('https://stark-crag-71277.herokuapp.com/product',{
           method:'post',
           headers: {'Content-Type':'application/json'},
           body: JSON.stringify({

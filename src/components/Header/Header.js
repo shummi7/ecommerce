@@ -17,7 +17,7 @@ class Header extends React.Component{
         this.setState({word:event.target.value.toLowerCase()})
     }
     onbuttonclick=()=>{
-        fetch('http://localhost:3001/search',{
+        fetch('https://stark-crag-71277.herokuapp.com/search',{
           method:'post',
           headers: {'Content-Type':'application/json'},
           body: JSON.stringify({
