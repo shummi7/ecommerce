@@ -6,9 +6,11 @@
     display:flex;
     justify-content: center;
     align-items: center;
+
+    /* background: pink; */
 }
 
-.ad_1{
+.advertise_1{
     width:60%;
     height:100%;
     padding:10px 20px;
@@ -21,7 +23,7 @@
     position:relative;
 }
 
-.ad_1 p{
+.advertise_1 p{
     display: inline-block;
     margin:7px 0px;
     
@@ -31,23 +33,23 @@
     position: relative;
     top:40%;
 }
-.ad_1 p:nth-child(odd){
+.advertise_1 p:nth-child(odd){
     padding:10px;
     font-weight: 900;
     font-size: 24px;
 }
-.ad_1 p:nth-child(2){
+.advertise_1 p:nth-child(2){
     background: none;
     color:black;
     font-size: 13px;
 }
-.ad_1 p:nth-child(3){
+.advertise_1 p:nth-child(3){
     font-weight: 100;
     font-size: 14px;
     border:1px solid rgb(233, 230, 230);
 
 }
-.ad_2{
+.advertise_2{
     width:30%;
     height:100%;
     /* padding:10px 20px; */
@@ -60,25 +62,25 @@
     display:flex;
     align-items: flex-end;
 }
-.ad_2 div{
+.advertise_2 div{
     background:rgba(0, 0, 0, 0.438);
     padding:15px 10px;
 }
-.ad_2 p{
+.advertise_2 p{
     width:100%;
     padding:5px 10px;
     color:white;
 }
-.ad_2 p:nth-child(1){
+.advertise_2 p:nth-child(1){
     font-size:26px;    
     font-weight: 100;
 }
-.ad_2 p:nth-child(2){
+.advertise_2 p:nth-child(2){
     font-size:12px;  
     text-align: justify;  
     padding:10px 10px 20px 10px;
 }
-.ad_2 p:nth-child(3){
+.advertise_2 p:nth-child(3){
     display:inline;
     font-size: 12px;
     margin:10px;

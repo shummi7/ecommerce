@@ -257,7 +257,7 @@ return(
                         <div>          
                           <Advertise
                           onCollectionRouteChange={this.onCollectionRouteChange}
-                          />
+                          /> 
                           <Products/>
                           <Todaydeal
                           onCollectionRouteChange={this.onCollectionRouteChange}
