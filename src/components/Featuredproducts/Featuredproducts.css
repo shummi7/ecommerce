@@ -57,6 +57,18 @@
     outline:none;
     cursor: pointer;
 }
+.featuredproducts_button button:active{
+    content:'yes';
+    padding:7px;
+    background: rgb(140, 194, 70);
+    color:white;
+    font-weight: 700;
+    border-radius: 10px;
+
+    border:none;
+    outline:none;
+    cursor: pointer;
+}
 .featuredproducts_item p{
     padding:5px 0px;
 }

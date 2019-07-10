@@ -38,7 +38,8 @@ productList=()=>{
 
 render(){
     // console.log('render',this.props.collectionData,this.props.collectionPage);
-    if(this.props.collectionData.length === 0){
+    var collectionp=this.props.collectionData;
+    if(collectionp.length === 0){
         return(<div><h1>Loading</h1></div>)
     }
     else{

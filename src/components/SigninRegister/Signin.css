@@ -19,20 +19,28 @@ input[type=text], input[type=password] {
 .sbutton {
   background-color: #4CAF50;
   color: white;
-  font-size: 15px;
+  font-size: 30px;
   font-weight: 500;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 100%;
+  height:50px;
   text-align: center;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;
 }
 
 .sbutton:hover {
   opacity: 0.8;
 }
 
+.sbutton:focus{
+  outline: none;
+}
 .titlecontainer {
   text-align: center;
   margin: 24px 0 12px 0;

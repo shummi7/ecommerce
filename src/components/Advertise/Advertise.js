@@ -3,7 +3,7 @@ import './Advertise.css';
 
 class Advertise extends React.Component{
 render(){ 
-    console.log('adfff');
+    // console.log('adfff');
 return(
 <div className='advertise'>
     <div className='adone'> 

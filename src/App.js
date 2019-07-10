@@ -29,6 +29,7 @@ class App extends Component{
     productPage:'',
     productData:[],
     featuredProductData:[],
+    newProductData:[],
     addToCartString:'',
     addToCartObj:{},
     cartDetails:''
@@ -36,8 +37,12 @@ class App extends Component{
   }
 
   onAddToCart=(product)=>{
-    // console.log('product',product);
-    // var p=product.replace(':','').replace(',','');
+    if(this.state.userData.id ===undefined){
+      this.onPageRouteChange('signinPage');
+    }
+
+
+    else {
     var addToCartStr='';
 
     var addToCartObjRef={};
@@ -104,7 +109,12 @@ class App extends Component{
         this.setState({addToCartString:addToCartStringRef});
         this.setState({addToCartObj:addToCartObjRef});
 
-      })
+      });
+
+   
+    }
+
+
   }
 
   onSignin=(data)=>{
@@ -172,7 +182,7 @@ class App extends Component{
     }
     setTimeout(() => {
       this.setState({collectionData:searchData});
-    }, 100)
+    }, 200)
     }
 
   onProductRouteChange=(product)=>{
@@ -198,6 +208,7 @@ class App extends Component{
   componentDidMount(){
     var featuredproductArray=['dress','headphones','cameras','phones','watches','laptops'];
     var featuredproduct=[];
+    
    
     for(var i=0;i<5;i++){
       var featuredproductTable= featuredproductArray[Math.floor(Math.random() * featuredproductArray.length)];
@@ -215,13 +226,28 @@ class App extends Component{
       })
     }
 
+    var newproduct=[];
+
+    fetch('https://stark-crag-71277.herokuapp.com/newproduct',{
+        method:'post',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+            table:'newproduct'
+        })
+    })
+    .then(response=>response.json())
+    .then(data=>{
+        newproduct=data;        
+    })
+
     setTimeout(() => {
       this.setState({featuredProductData: featuredproduct});
+      this.setState({newProductData: newproduct});
     }, 1000);
   }
 
 render(){
-
+// console.log('npd',this.state.newProductData);
 return(
 <div>
 <Header
@@ -251,6 +277,7 @@ return(
                           <Register
                           onPageRouteChange={this.onPageRouteChange}
                           onheaderSigninRouteChange={this.onheaderSigninRouteChange}
+                          onSignin={this.onSignin}
                           /> 
                         </div>)
         case 'mainPage':return(          
@@ -258,13 +285,17 @@ return(
                           <Advertise
                           onCollectionRouteChange={this.onCollectionRouteChange}
                           /> 
-                          <Products/>
+                          <Products
+                          newProductData={this.state.newProductData}
+                          onProductRouteChange={this.onProductRouteChange}
+                          onAddToCart={this.onAddToCart}
+                          />
                           <Todaydeal
                           onCollectionRouteChange={this.onCollectionRouteChange}
                           />
                           <Featuredproducts
                           featuredProductData={this.state.featuredProductData}
-                          onFeaturedProductRouteChange={this.onProductRouteChange}
+                          onProductRouteChange={this.onProductRouteChange}
                           onAddToCart={this.onAddToCart}
                           /> 
                         </div>)

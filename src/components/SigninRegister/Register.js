@@ -36,7 +36,9 @@ class Signin extends React.Component{
         .then(response => response.json())
         .then(data => {
             if(data.id){
-                this.props.onPageRouteChange('mainPage');         
+                this.props.onPageRouteChange('mainPage'); 
+                this.props.onSignin(data);    
+                // console.log('data1',data);    
             }
         })
     }

@@ -8,7 +8,7 @@ var productData2=this.props.featuredProductData;
 return( 
     <div>
         <div className='featuredproducts_image'>
-        <img src={`${productData2[i].productimg}`} alt='pic'  onClick={()=>this.props.onFeaturedProductRouteChange(productData2[i].productcode)}></img>
+        <img src={`${productData2[i].productimg}`} alt='pic'  onClick={()=>this.props.onProductRouteChange(productData2[i].productcode)}></img>
         </div>
 
         <div className='featuredproducts_button'>
@@ -32,7 +32,7 @@ featuredProductList=(product)=>{
     }   
     return flist; 
 }
-
+ 
 render(){
 
     var product=this.props.featuredProductData;

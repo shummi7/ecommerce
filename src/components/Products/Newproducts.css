@@ -37,8 +37,10 @@
     overflow:hidden;
 }
 .newproducts_item img{
+    /* width:100%; */
     width:100%;
-    /* box-shadow: 0px 3px 5px rgb(192, 191, 191); */
+    height:100%;
+    object-fit: contain;
 }
 .newproducts_button{
     display: flex;
@@ -55,6 +57,20 @@
     outline:none;
     cursor: pointer;
 }
+
+.newproducts_button button:active{
+    content:'yes';
+    padding:7px;
+    background: rgb(140, 194, 70);
+    color:white;
+    font-weight: 700;
+    border-radius: 10px;
+
+    border:none;
+    outline:none;
+    cursor: pointer;
+}
+
 .newproducts_item p{
     padding:5px 0px;
 }

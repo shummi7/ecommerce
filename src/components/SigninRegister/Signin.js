@@ -35,6 +35,7 @@ class Signin extends React.Component{
             if(data.id){
                 this.props.onPageRouteChange('mainPage');  
                 this.props.onSignin(data);
+                // console.log('data2',data);    
             }
             else{
                 console.log('wrng');
@@ -61,8 +62,8 @@ return(
         <label><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="password" required onChange={this.passwordInputChange}/>
             
-        <input className="sbutton"
-        onClick={this.onSigninClick} onChange={this.hi} value='SIGN IN'/>
+        <p className="sbutton"
+        onClick={this.onSigninClick} onChange={this.hi}>SIGN IN</p>
         <p onClick={()=>this.props.onPageRouteChange('registerPage')}>REGISTER</p>
     </div>
 
