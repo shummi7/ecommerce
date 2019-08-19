@@ -23,7 +23,7 @@ class App extends Component{
   this.state={
     userData:{},
     headerSiginin:'Sign In',
-    pageRoute:'signinPage',
+    pageRoute:'mainPage',
     collectionPage:'',
     collectionData:[],
     productPage:'',

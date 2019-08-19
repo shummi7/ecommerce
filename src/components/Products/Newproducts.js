@@ -53,7 +53,7 @@ newProductList=(product)=>{
 
 render(){
     var product=this.props.newProductData;
-    console.log('producy',product);
+    // console.log('producy',product);
 
     if(product.length === 0){
         // console.log('ohhhooo1',product.length);
