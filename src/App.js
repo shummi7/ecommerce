@@ -96,7 +96,7 @@ class App extends Component{
   
   }
 
-    fetch('https://stark-crag-71277.herokuapp.com/cart',{
+    fetch('https://ecommerceapi-ac7a.onrender.com/cart',{
           method:'post',
           headers: {'Content-Type':'application/json'},
           body: JSON.stringify({
@@ -124,7 +124,7 @@ class App extends Component{
   onPageRouteChange=(page)=>{
     this.setState({pageRoute:page}); 
     if(page==='cartPage'){
-      fetch('https://stark-crag-71277.herokuapp.com/userdetails',{
+      fetch('https://ecommerceapi-ac7a.onrender.com/userdetails',{
           method:'post',
           headers: {'Content-Type':'application/json'},
           body: JSON.stringify({
@@ -144,7 +144,7 @@ class App extends Component{
     this.setState({collectionPage:collection});
 
     var collectionname=collection.toLowerCase();
-    fetch('https://stark-crag-71277.herokuapp.com/collection',{
+    fetch('https://ecommerceapi-ac7a.onrender.com/collection',{
         method:'post',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({
@@ -166,7 +166,7 @@ class App extends Component{
     for(var i=0;i<search.length;i++){
 
     var productname=search[i].replace(/[0-9]/g,'');
-    fetch('https://stark-crag-71277.herokuapp.com/product',{
+    fetch('https://ecommerceapi-ac7a.onrender.com/product',{
         method:'post',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({
@@ -190,7 +190,7 @@ class App extends Component{
     this.setState({pageRoute:'productPage'})
 
     var productname=product.replace(/[0-9]/g,'');
-    fetch('https://stark-crag-71277.herokuapp.com/product',{
+    fetch('https://ecommerceapi-ac7a.onrender.com/product',{
         method:'post',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({
@@ -212,7 +212,7 @@ class App extends Component{
    
     for(var i=0;i<5;i++){
       var featuredproductTable= featuredproductArray[Math.floor(Math.random() * featuredproductArray.length)];
-      fetch('https://stark-crag-71277.herokuapp.com/featuredproduct',{
+      fetch('https://ecommerceapi-ac7a.onrender.com/featuredproduct',{
           method:'post',
           headers: {'Content-Type':'application/json'},
           body: JSON.stringify({
@@ -228,7 +228,7 @@ class App extends Component{
 
     var newproduct=[];
 
-    fetch('https://stark-crag-71277.herokuapp.com/newproduct',{
+    fetch('https://ecommerceapi-ac7a.onrender.com/newproduct',{
         method:'post',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({
